@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Basic
+   ========================================================================== */
 html{
   overflow-y: scroll;
   overflow-x: hidden;
@@ -33,6 +36,9 @@ a{
   background-position: 0 28px;
   transition: all 200ms ease-in-out 0s;
 }
+/* ==========================================================================
+   Headers
+   ========================================================================== */
 h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -56,6 +62,26 @@ h6{
   font-size: 1.8rem;
 }
 
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+
 blockquote{
   font-style: italic;
   border-left: 4px solid #444;
@@ -73,7 +99,11 @@ pre > code{
   margin: 0;
   white-space: pre;
 }
-.button{
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]{
   background-image: none;
   background-color: #C6CCD2;
   border-color: #AAB3BB;
@@ -110,15 +140,19 @@ pre > code{
   border-color: #AAB3BB; 
   color: #fff;
 }
-/* Helpers */
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
 .vertical{
   display: table-cell;
   vertical-align: middle;
 }
 
-.menu{
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.nav{
   position: absolute;
-  line-height: 60px;
   padding-top: 10px;
   width: 100%;
   z-index: 9999;
@@ -127,18 +161,18 @@ pre > code{
 }
 .navTitle{
   padding-left: 1em;
-  padding-top: 5px;
+  padding-top: .16em;
   margin: 0;
 }
 .navTitle a{
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
 }
 .navItems{
   top: 0;
   right: 0;
   position: absolute;
-  padding-top: 15px;
+  padding-top: 2em;
   padding-right: 2em;
   
 }
@@ -158,6 +192,9 @@ pre > code{
   background-size: 3px 3px;
   background-position: 0 80px;
 }
+/* ==========================================================================
+   Home Banner
+   ========================================================================== */
 .banner{
   color: #fff;
   background-color: #3A4145;
@@ -195,6 +232,9 @@ pre > code{
   color: #fff;
   border: solid 2px #fff;
 }
+/* ==========================================================================
+   Format
+   ========================================================================== */
 .container{
   width: 100%;
   max-width: 720px;
