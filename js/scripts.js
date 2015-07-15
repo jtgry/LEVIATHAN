@@ -7,7 +7,7 @@ $(document).ready(function () {
         $(".midNav").toggleClass("mid-animate");
         $(".bottomNav").toggleClass("bottom-animate");
     });
-    $(".mobileNav").click(function () {
+    $(".mobileNav a").click(function () {
         $(".mobileNav").fadeToggle(500);
         $(".topNav").toggleClass("top-animate");
         $(".midNav").toggleClass("mid-animate");
