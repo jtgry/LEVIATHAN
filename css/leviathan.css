@@ -5,13 +5,14 @@ html{
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: 'Merriweather', serif;
-  font-size: 18px;
+  font-size: 70%;
 }
 
 body{
   color: #444;
   font-weight: 400;
   font-style: normal;
+  font-size: 1.4em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,14 +20,15 @@ body{
   margin: 0;
 }
 
-p,ul,ol,a{
-  font-size: 1.2rem;
-  line-height: 1.6;
-  letter-spacing: .01rem;
-}
-p{
-  margin-top: 0;
-}
+p {
+  margin-top:2em;
+  margin-bottom:2em;
+  line-height:1.6;
+  display:block;
+  -webkit-margin-before:1em;
+  -webkit-margin-after:1em;
+  -webkit-margin-start:0;
+  -webkit-margin-end:0}
 a{
   color: #333;
   text-decoration: none;
@@ -34,7 +36,6 @@ a{
   background-repeat: repeat-x;
   background-size: 3px 3px;
   background-position: 0 24px;
-  transition: all 200ms ease-in-out 0s;
 }
 /* ==========================================================================
    Headers
@@ -82,6 +83,143 @@ ol ul {
 li {
   margin-bottom: 1rem; }
 
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+  width: 100%;
+  }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+  /* ==========================================================================
+     Buttons
+     ========================================================================== */
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"]{
+    background-image: none;
+    background-color: #C6CCD2;
+    border-color: #C6CCD2;
+    border-style: solid;
+    border-width: 2px;
+    color: #FFFFFF;
+    border-radius: 40px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    transition: size 200ms ease-in-out 0s;
+    padding: 15px 39px 14px;
+    margin: 0 20px;
+  }
+  .button:hover, .button:focus, .button:active {
+      background-color: #B8BFC7;
+      border-color: #B8BFC7;
+  }
+  .buttonAlt{
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: #AAB3BB;
+    border: solid 2px #AAB3BB;
+
+  }
+  .buttonAlt:hover, .buttonAlt:focus, .buttonAlt:active {
+    background-color: #B8BFC7;
+    border-color: #AAB3BB;
+    color: #fff;
+  }
+
+  /* ==========================================================================
+     Forms
+     ========================================================================== */
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  textarea,
+  select {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box; }
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  textarea {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+  textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px; }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #8F1D21;
+    outline: 0; }
+  label,
+  legend {
+    display: block;
+    margin-bottom: .5rem;
+    }
+  fieldset {
+    padding: 0;
+    border-width: 0; }
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: inline; }
+  label > .label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal; }
+/* ==========================================================================
+   Code
+   ========================================================================== */
+  pre{
+    background-color: #444;
+    display: block;
+    white-space: nowrap;
+  }
+  pre > code{
+    color: #fff;
+    margin: 0;
+    white-space: pre;
+  }
+/* ==========================================================================
+   Other
+   ========================================================================== */
 blockquote{
   font-style: italic;
   border-left: 4px solid #444;
@@ -89,60 +227,22 @@ blockquote{
   margin-left: -23px;
   padding-bottom: 3px;
 }
-pre{
-  background-color: #444;
-  display: block;
-  white-space: nowrap;
-}
-pre > code{
-  color: #fff;
-  margin: 0;
-  white-space: pre;
-}
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"]{
-  background-image: none;
-  background-color: #C6CCD2;
-  border-color: #C6CCD2;
-  border-style: solid;
-  border-width: 2px;
-  color: #FFFFFF;
-  border-radius: 40px;
-  cursor: pointer;
-  display: inline-block;
-  font-style: normal;
-  overflow: hidden;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  transition: all 200ms ease-in-out 0s;
-  padding: 10px 39px 7px;
-  margin: 0 20px;
-}
-.button:hover, .button:focus, .button:active {
-    background-color: #B8BFC7;
-    border-color: #AAB3BB;
-}
-.buttonAlt{
-  background-image: none;
-  background-color: rgba(255, 255, 255, 0);
-  color: #AAB3BB;
-  border: solid 2px #AAB3BB;
-
-}
-.buttonAlt:hover, .buttonAlt:focus, .buttonAlt:active {
-  background-color: #B8BFC7;
-  border-color: #AAB3BB;
-  color: #fff;
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1;
 }
 /* ==========================================================================
    Helpers
    ========================================================================== */
+
+ .pullRight {
+   float: right; }
+ .pullLeft {
+   float: left; }
+ .textCenter{
+   text-align: center;}
 .vertical{
   display: table-cell;
   vertical-align: middle;
@@ -153,8 +253,9 @@ input[type="button"]{
    ========================================================================== */
 .nav{
   position: absolute;
-  padding-top: 10px;
+  padding: 27px 0 5px 0;
   width: 100%;
+  /*background-color: #444;*/
   z-index: 9999;
   color: #fff;
   text-transform: uppercase;
@@ -162,20 +263,18 @@ input[type="button"]{
 }
 .navTitle{
   padding-left: 1em;
-  padding-top: .16em;
   margin: 0;
 }
 .navTitle a{
-  font-size: 1.4rem;
+  float: left;
+  font-size: 1.6rem;
   color: #fff;
   background-image: none;
 }
 .navItems{
-  top: 0;
-  right: 0;
-  position: absolute;
-  padding-top: 1.5em;
-  padding-right: 2em;
+  float: right;
+  padding-right: 1em;
+  line-height: 1.5em;
 }
 .navItems li{
   display: inline;
@@ -187,7 +286,7 @@ input[type="button"]{
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.0) 50%);
   background-repeat: repeat-x;
   background-size: 3px 3px;
-  background-position: 0 80px;
+  background-position: 0 84px;
 }
 .navItems a:hover{
   color: #fff;
@@ -195,7 +294,7 @@ input[type="button"]{
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.9) 50%);
   background-repeat: repeat-x;
   background-size: 3px 3px;
-  background-position: 0 80px;
+  background-position: 0 84px;
 }
 
 /* ==========================================================================
@@ -226,7 +325,7 @@ input[type="button"]{
 
 .bannerTitle{
   font-size: 1.6rem;
-  letter-spacing: .2em;
+  letter-spacing: .3em;
   font-weight: 800;
   margin-bottom: .4em;
 }
@@ -265,13 +364,15 @@ footer{
   .bannerTitle{
     font-size: 2rem;
   }
-
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   .bannerTitle{
     font-size: 2.5rem;
+  }
+  html{
+    font-size: 80%;
   }
 }
 
@@ -280,10 +381,16 @@ footer{
   .bannerTitle{
     font-size: 3rem;
   }
+  html{
+    font-size: 90%;
+  }
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
+  html{
+    font-size: 100%;
+  }
   .bannerTitle{
     font-size: 4rem;
   }
